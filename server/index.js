@@ -14,14 +14,8 @@ massive(process.env.CONNECTION_STRING)
   .catch(err => console.log(err));
 
 app.get("/api/people", people_controller.getAll);
-app.get("/api/people/:id", people_controller.getOne);
-// app.put("/api/people/:id", people_controller.update);
-// app.delete("/api/people/:id", people_controller.delete);
 
 app.get("/api/planets", planets_controller.getAll);
-app.get("/api/planets/:id", planets_controller.getOne);
-// app.put("/api/planets/:id", planets_controller.update);
-// app.delete("/api/planets/:id", planets_controller.delete);
 
 const port = process.env.PORT || 3005;
 app.listen(port, () => {
